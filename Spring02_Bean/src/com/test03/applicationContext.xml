@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+	<bean id="today" class="java.util.Date"></bean>
+	
+	<bean id="simpledateformat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd"></constructor-arg>
+	</bean>
+
+	<bean id="birth" class="java.util.Date">
+		<constructor-arg name="year" value="94"></constructor-arg>
+		<constructor-arg name="month" value="11"></constructor-arg>
+		<constructor-arg name="date" value="26"></constructor-arg>
+	</bean>
+	
+	<bean></bean>
+		
+	<bean id="kim" class="com.test03.UserDto">
+		<constructor-arg name="name" value="김용범"></constructor-arg>
+		<property name="mydate" ref="birth">
+		
+		<!-- 
+			<bean factory-bean="simpledateformat" factory-method="parse">
+				<constructor-arg value="1994-11-26"></constructor-arg>
+			</bean>
+		-->
+		</property>
+	</bean>
+	
+	<bean id="service" class="com.test03.UserServiceImpl">
+	</bean>
+
+</beans>

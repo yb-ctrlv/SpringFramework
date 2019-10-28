@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="you" class="com.test04.Emp">
+		<constructor-arg value="유재석"></constructor-arg>
+		<constructor-arg value="250"></constructor-arg>
+	</bean>
+	
+	<bean id="kang" class="com.test04.Emp">
+		<constructor-arg value="강호동"></constructor-arg>
+		<constructor-arg value="200"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="Dyou" class="com.test04.Developer">
+		<constructor-arg ref="you"></constructor-arg>
+		<constructor-arg value="지옥"></constructor-arg>
+	</bean>
+	
+	<bean id="Dkang" class="com.test04.Engineer">
+		<constructor-arg ref="kang"></constructor-arg>
+		<constructor-arg value="천국"></constructor-arg>
+	</bean>
+	
+
+
+</beans>
